@@ -6,7 +6,7 @@ It has been reverse engineered from the binaries using `IDA` and `SQL Server Pro
 
 ## How to run
 
-Scripts should be run in sequence.
+Scripts should be run in sequence from 1 to 9.
 
 ## Docker
 
