@@ -1,0 +1,26 @@
+#Property
+
+port = 8787
+// webPort is not used
+webPort = 8888
+
+gameWorldId = 0
+LimitGoodsFile = LimitGoods.img
+
+// Public IP of Shop server
+PublicIP = bms_server
+// IP of Center server
+PrivateIP = localhost 
+
+cashDaemon = {
+	CGS1 = {
+		ip = localhost 
+		port = 36091
+	}
+}
+
+center = {
+	ip = localhost 
+	port = 9000
+	worldName = Orion
+}
