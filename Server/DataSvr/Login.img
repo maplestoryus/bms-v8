@@ -1,0 +1,28 @@
+#Property
+
+
+port = 8484
+adminPort = 7870
+dbCatalogGlobalAccount = GlobalAccount
+dbGlobalAccountSource = bmsdb,1433
+
+
+PublicIP = bms_server
+PrivateIP = localhost 
+
+logaccount = {
+	
+}
+
+center = {
+	CenterOrion = {
+		ip = localhost 
+		port = 9000
+		world = 0
+		//1 = Event, 2 = new
+		worldState = 2
+		channelNo = 5
+	}
+	
+}
+

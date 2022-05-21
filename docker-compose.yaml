@@ -14,10 +14,10 @@ services:
     healthcheck:
       test: /db-healthcheck.sh
     volumes:
-      - "temp:/var/opt/mssql/data:rw"
-      - "Database:/scripts"
-      - "Scripts/start-database.sh:/start-database.sh"
-      - "Scripts/db-healthcheck.sh:/db-healthcheck.sh"
+      - "./temp:/var/opt/mssql/data:rw"
+      - "./Database:/scripts"
+      - "./Scripts/start-database.sh:/start-database.sh"
+      - "./Scripts/db-healthcheck.sh:/db-healthcheck.sh"
     ports:
       - "1433:1433" # Add like this for public: 127.0.0.1:1433:1433
     entrypoint: /bin/bash -c "/start-database.sh"
@@ -32,3 +32,24 @@ services:
       - "./Database:/scripts"
       - "./Scripts/clean-world.sh:/clean-world.sh"
     entrypoint: /bin/bash -c "/clean-world.sh"
+  bms_server:
+    container_name: bms_server
+    extra_hosts: *extra_hosts
+    build: .
+    depends_on:
+      - bms_sidecar
+    build: .
+    ports:
+      - "8484:8484"
+      - "8585:8585"
+      - "8586:8586"
+      - "8587:8587"
+      - "8588:8588"
+      - "8589:8589"
+      - "8787:8787"
+    volumes:
+      - "./temp/MSLog:/root/.wine32/drive_c/MSLog"
+      - "./Server/BinSvr:/root/.wine32/drive_c/Server/BinSvr"
+      - "./Server/DataSvr:/root/.wine32/drive_c/Server/DataSvr"
+      - "./Server/start-server.sh:/start-server.sh"
+    entrypoint: /bin/bash -c "/start-server.sh"
