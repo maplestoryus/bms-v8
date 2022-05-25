@@ -608,7 +608,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 /*
   Returns account cash points
-  @author: BR1337
 */
 CREATE PROCEDURE [dbo].[MaplePoint_Get]
 	@AccountID int
