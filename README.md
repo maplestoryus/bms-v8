@@ -1,7 +1,7 @@
 
-# BMS V8 Docker
+# Brazil Maple Story v8 server files docker
 
-This is the almost complete(99%) and fully functional maplestory v8 database compatible with the bms leak server files.
+This is the almost complete(99%) and fully functional maplestory v8 database compatible with the bms leak server files and available with docker.
 
 It has been reverse engineered from the binaries using `IDA` and `SQL Server Profiler`.
 
