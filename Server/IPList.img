@@ -1,0 +1,14 @@
+#Property
+
+Info = {
+	bBlockTypeEverywhere = 0
+	dwMaxUnlimitedAccountID = 0
+	Block = {
+	}
+}
+
+Data = {
+	INCA = {
+	}
+}
+
